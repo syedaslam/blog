@@ -1,3 +1,21 @@
-<p>
-  signup works!
-</p>
+<!-- <div class="text-center button">
+  <button class="btn btn-google">Sign in with Google</button>
+</div>
+<div class="text-center button">
+  Or
+</div>
+<div class="text-center button">
+  <button class="btn btn-primary">Sign in with Facebook</button>
+</div> -->
+
+<div class="login-form">
+  <form action="/examples/actions/confirmation.php" method="post">
+    <h2 class="text-center">Sign in</h2>
+    <div class="text-center social-btn">
+      <button class="btn btn-danger btn-block" (click)="loginWithGoogle()"><i class="fa fa-google"></i> Sign in with <b>Google</b></button>
+      <button href="#" class="btn btn-primary btn-block" (click)="loginWithFb()"><i class="fa fa-facebook"></i> Sign in with <b>Facebook</b></button>
+    </div>
+   
+
+  </form>
+</div>

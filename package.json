@@ -26,6 +26,7 @@
     "core-js": "^2.5.4",
     "firebase": "^5.4.2",
     "font-awesome": "^4.7.0",
+    "ng2-go-top-button": "^6.0.0",
     "ngx-custom-validators": "^6.0.5",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"

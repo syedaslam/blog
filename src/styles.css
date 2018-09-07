@@ -2,7 +2,9 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~font-awesome/css/font-awesome.css";
 /* stylelint-disable selector-list-comma-newline-after */
-
+html,body{
+  background:white;
+  }
 .blog-header {
     line-height: 1;
     border-bottom: 1px solid #e5e5e5;
@@ -125,4 +127,11 @@
   }
   .blog-footer p:last-child {
     margin-bottom: 0;
+  }
+
+
+  .blockquote{
+    padding:10px 20px;
+    background-color: #f7f7f7;
+    border-left: 5px solid pink;
   }

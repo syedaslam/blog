@@ -13,13 +13,21 @@ import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { BlogFormComponent } from './blog-form/blog-form.component';
+import { FeaturedPostComponent } from './featured-post/featured-post.component';
+import { BlogViewComponent } from './blog-view/blog-view.component';
+import {GoTopButtonModule} from 'ng2-go-top-button';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     SignupComponent,
-    HomeComponent
+    HomeComponent,
+    BlogFormComponent,
+    FeaturedPostComponent,
+    BlogViewComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +38,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+    GoTopButtonModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

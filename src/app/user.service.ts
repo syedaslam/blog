@@ -11,4 +11,16 @@ export class UserService {
   mailSubscribe(mail){
     return this.db.list('/emailList').push(mail);
   }
+
+  save(user:firebase.User){   
+    this.db.object('/users/' + user.uid).update({
+      name:user.displayName,
+      email:user.email
+    })
+  }
+  
+  get(uid:string){
+    return this.db.object('/users/' + uid).valueChanges();
+  }
+  
 }

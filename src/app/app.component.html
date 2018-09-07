@@ -1,6 +1,25 @@
 <nav-bar></nav-bar>
 <main role="main" class="container">
-
+    
   <router-outlet></router-outlet>
-  
+  <go-top-button   [animate]="true"
+    [speed]="50"
+    [acceleration]="2"
+    [scrollDistance]="300"
+    [classNames]="'go-top'"
+    [styles]="{
+       'border-radius': '20px 20px 20px 20px',
+       'right': '5px',
+       'color': 'black',
+       'border': '5px solid',
+       'line-height': '20px'
+    }">
+<i class='fa fa-arrow-up '></i>
+</go-top-button>
 </main>
+<footer class="blog-footer">
+    <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+    <p>
+      <a href="#">Back to top</a>
+    </p>
+</footer>
