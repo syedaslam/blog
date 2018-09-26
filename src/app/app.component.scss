@@ -4,6 +4,24 @@ go-top-button{
     right:5%;
    
 }
-
+.fixed{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+}
+.overlay{
+    background-color: white;
+    z-index: 2;
+    
+}
+.x{
+    position: sticky;
+    top: 100vh;
+    width: 100%;
+    z-index: 2;
+}
+._pt-125{
+    padding-top: 130px;
+}
 
 

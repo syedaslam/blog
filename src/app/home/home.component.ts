@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BlogService } from '../blog.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'home',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  blogArray=[];
+
+  constructor(private blogService:BlogService,private router:Router) { }
 
   ngOnInit() {
+    this.blogService.getAll().subscribe(data=>this.blogArray=data)
   }
-
+  continueRead(key){
+    this.router.navigate(['/blogs/'+key]);
+  }
 }

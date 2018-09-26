@@ -6,6 +6,7 @@ import { BlogFormComponent } from './blog-form/blog-form.component';
 import { AdminAuthGuard } from './admin-auth-guard.service';
 import { AuthGuard } from './auth-guard.service';
 import { BlogViewComponent } from './blog-view/blog-view.component';
+import { AdminBlogComponent } from './admin-blog/admin-blog.component';
 
 const routes: Routes = [
   { 
@@ -17,7 +18,12 @@ const routes: Routes = [
     component:HomeComponent
   },
   {
-    path:'author/blog-form',
+    path:'admin/blog',
+    component:AdminBlogComponent,
+    canActivate:[AuthGuard,AdminAuthGuard]
+  },
+  {
+    path:'author/blog-form/:id',
     component:BlogFormComponent,
     canActivate:[AuthGuard,AdminAuthGuard]
   },

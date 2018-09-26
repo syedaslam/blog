@@ -22,7 +22,7 @@ export class BlogService {
     return this.db.object('/blogs/'+ blogId).valueChanges();
   }
   update(blogId,blog){
-    this.db.object('/blogs/'+blogId).update(blog)
+    this.db.object('/blogs/'+blogId).update(blog).then(data=>console.log('done',data))
   }
   delete(blogId){
     this.db.object('/blogs/'+blogId).remove();

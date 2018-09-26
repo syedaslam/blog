@@ -4,6 +4,7 @@
 /* stylelint-disable selector-list-comma-newline-after */
 html,body{
   background:white;
+  height: 100vh;
   }
 .blog-header {
     line-height: 1;
@@ -92,7 +93,7 @@ html,body{
     }
   }
   
-  /* Pagination */
+
   .blog-pagination {
     margin-bottom: 4rem;
   }
@@ -135,3 +136,28 @@ html,body{
     background-color: #f7f7f7;
     border-left: 5px solid pink;
   }
+
+
+
+.fixedWidth{
+    height: 75px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.anchor{
+  cursor: pointer;
+  
+}
+.anchor:hover{
+  text-decoration: underline;
+}
+
+.thumbnail { 
+  /* width: 200px; */
+  height: 100%;
+  /* border-radius: 100%; */
+  background-size: cover;
+  background-position: center;
+
+}

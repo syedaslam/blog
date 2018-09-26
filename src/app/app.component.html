@@ -1,5 +1,7 @@
-<nav-bar></nav-bar>
-<main role="main" class="container">
+<div class="fixed overlay shadow">
+    <nav-bar></nav-bar>
+</div>
+<main role="main" class="container _pt-125">
     
   <router-outlet></router-outlet>
   <go-top-button   [animate]="true"
@@ -17,9 +19,8 @@
 <i class='fa fa-arrow-up '></i>
 </go-top-button>
 </main>
-<footer class="blog-footer">
-    <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-    <p>
-      <a href="#">Back to top</a>
-    </p>
+<footer class="blog-footer x">
+   <p>Build with <i class="fas fa-heart"></i> by Abu </p>
+   
+
 </footer>
