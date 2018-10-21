@@ -5,7 +5,6 @@ import * as firebase from 'firebase';
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
-import { BlogService } from './blog.service';
 import { UserService } from './user.service';
 
 @Injectable({

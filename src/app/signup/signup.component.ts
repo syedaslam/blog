@@ -7,6 +7,7 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
+  loader = false;
 
   constructor(private authService:AuthService) { }
 
@@ -14,6 +15,7 @@ export class SignupComponent implements OnInit {
   }
   loginWithGoogle(){
     this.authService.loginWithGoogle();    
+    this.loader=true;
   }
 
 }

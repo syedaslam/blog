@@ -23,14 +23,12 @@ export class FeaturedPostComponent implements OnInit {
 
   ngOnInit() {
     this.featuredPostService.getAllFeatured().subscribe(data=>{
-      console.log(data)
       this.postKey = data;
       if(this.postKey){
-        console.log(this.postKey)
         this.longFeatured$=this.blogService.get(this.postKey.longFeatured);
         this.featuredOne$=this.blogService.get(this.postKey.featuredOne);
         this.featuredTwo$=this.blogService.get(this.postKey.featuredTwo);
-        this.featuredOne$.subscribe(data=>console.log(data))
+      
 
 
       }

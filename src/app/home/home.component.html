@@ -1,56 +1,64 @@
+<my-loader *ngIf="loader"></my-loader>
 
+<div *ngIf="!loader">
     <featured-post></featured-post>
 
 
-<main role="main" class="container">
-  <div class="row">
-    <div class="col-md-8 blog-main">
-      <h3 class="pb-3 mb-4 font-italic border-bottom">
-        More to read
-      </h3>
-
-      
-      <div class="posts" >
-        <div class="card blog-post "  *ngFor="let blog of blogArray">
-            <div [style.backgroundImage]="'url(' + blog.imageUrl + ')'" class =" thumbnail1 " ></div>
-            <div class="card-body">
-              <h5 class="card-title">{{blog?.title}}</h5>
-              <div markdown [data]="blog?.content" class="card-text mb-auto fixedWidth" ngPreserveWhitespaces></div>
-              <span class="text-black font-weight-bold anchor" (click)="continueRead(blog.key)">Continue reading...</span>
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8 blog-main">
+          <h3 class="pb-3 mb-4 font-italic border-bottom">
+            More to read
+          </h3>
+    
+          
+          <div class="posts" >
+            <div class="card blog-post pointer"  *ngFor="let blog of blogArray" (click)="continueRead(blog.key)">
+                <div [style.backgroundImage]="'url(' + blog.imageUrl + ')'" class =" thumbnail1 " ></div>
+                <div class="card-body">
+                  <h5 class="card-title">{{blog?.title}}</h5>
+                  <div markdown [data]="blog?.content" class="card-text mb-auto fixedWidth" ngPreserveWhitespaces></div>
+                  <span class="text-black font-weight-bold anchor" >Continue reading...</span>
+                </div>
             </div>
-        </div>
-      </div>
-      <nav class="blog-pagination">
-        <span class="btn btn-outline-primary" >Load More</span>
-      </nav>
-
-    </div>  
-    <!-- /.blog-main -->
-
-    <aside class="col-md-4 blog-sidebar">
-      <div class="p-3 mb-3 bg-light rounded">
-        <h4 class="font-italic">About</h4>
-        <p class="mb-0">We post <em>when we feel like it.</em> </p>
-      </div>
-
-      <div>
-        <div class="p-3" style="height: 400px;background-color: whitesmoke">
-          My Ad here...
-        </div>
-      </div>
-
-      <div class="p-3">
-        <h4 class="font-italic">Elsewhere</h4>
-        <ol class="list-unstyled">
-          <li><a href="#">GitHub</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Facebook</a></li>
-        </ol>
-      </div>
-    </aside><!-- /.blog-sidebar -->
-
-  </div><!-- /.row -->
-
-</main><!-- /.container -->
-
-
+          </div>
+          <nav class="blog-pagination">
+            <!-- <span class="btn btn-outline-primary" >Load More</span> -->
+          </nav>
+    
+        </div>  
+        <!-- /.blog-main -->
+    
+        <aside class="col-md-4 blog-sidebar">
+          <div class="p-3 mb-3 bg-light rounded">
+            <h4 class="font-italic">About</h4>
+            <p class="mb-0">We post <em>when we feel like it.</em> About <em>things</em> we like.</p>
+          </div>
+    
+          <div>
+            <div class="p-3" style="height: 400px;background-color: rgb(117, 107, 107)">
+              <ng-adsense
+              [adClient]="'ca-pub-5868208562565398'"
+              
+              [display]="'inline-block'" 
+            >
+            </ng-adsense>
+            </div>
+          </div>
+    
+          <div class="p-3">
+            <h4 class="font-italic">Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="https://www.instagram.com/abhyoday_sisodia/">Instagram</a></li>
+              <li><a href="https://www.facebook.com/abhyodaymessi">Facebook</a></li>
+            </ol>
+          </div>
+        </aside><!-- /.blog-sidebar -->
+    
+      </div><!-- /.row -->
+    
+    </main><!-- /.container -->
+    
+    
+    
+</div>

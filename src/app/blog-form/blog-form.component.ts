@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BlogService } from '../blog.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { take } from 'rxjs/operators';
+import { Title } from '@angular/platform-browser';
 
 
 @Component({
@@ -10,26 +11,37 @@ import { take } from 'rxjs/operators';
   styleUrls: ['./blog-form.component.css']
 })
 export class BlogFormComponent implements OnInit {
-  product= {};
+  
   id;
   content;  
   saved=false;
+  product = {
+    title:"",
+    category:"",
+    imageUrl:"",
+    content:""
+  };
  
   constructor(
     private blogService:BlogService,
     private route:ActivatedRoute,
     private router:Router,
-    ){}
+    ){
+     
+    }
 
   ngOnInit() {
     this.id= this.route.snapshot.paramMap.get('id');
       if(this.id){
-        this.blogService.get(this.id).pipe(take(1)).subscribe(x=>this.product=x); 
+        this.blogService.get(this.id).pipe(take(1)).subscribe((x:any)=>{
+          if(x)
+          this.product=x;
+        }); 
       }
   }
 
   save(blog){  
-    if(this.id){
+    if(this.id && this.id != 'new'){
       this.blogService.update(this.id,blog)
     }
      else{
@@ -59,5 +71,6 @@ export class BlogFormComponent implements OnInit {
      }
    }
 
+  
 
 }

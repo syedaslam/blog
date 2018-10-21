@@ -1,11 +1,11 @@
 
 
-<form #f="ngForm" (ngSubmit)="save(f.value)">
-    <div class="editor1">     
+<form #f="ngForm" (ngSubmit)="save(f.value)" >
+    <div class="editor1" >     
         <div class="form-group">
             <label for="title">Title</label>
-            <input #title="ngModel" [(ngModel)]="product['title']" name="title" id="title" type="text" class="form-control" required>
-            <div class="alert alert-danger" *ngIf="title.touched && title.invalid">
+            <input #title="ngModel" [(ngModel)] = "product.title" name = "title" id = "title" type = "text" class = "form-control" required>
+            <div class = "alert alert-danger" *ngIf = "title.touched && title.invalid">
                 Title is Required.
             </div>
         </div>

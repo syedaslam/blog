@@ -22,6 +22,8 @@ import { HomeComponent } from './home/home.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SignupComponent } from './signup/signup.component';
 import { AdminBlogComponent } from './admin-blog/admin-blog.component';
+import { LoaderComponent } from './loader/loader.component';
+import { AdsenseModule } from 'ng2-adsense';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { AdminBlogComponent } from './admin-blog/admin-blog.component';
     FeaturedPostComponent,
     BlogViewComponent,
     AdminBlogComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,11 @@ import { AdminBlogComponent } from './admin-blog/admin-blog.component';
     BrowserAnimationsModule,
     QuillModule,
     MarkdownModule.forRoot(),
-    DataTableModule
+    DataTableModule,
+    AdsenseModule.forRoot({
+      adClient: 'ca-pub-5868208562565398'
+    
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,7 +8,7 @@
         </p>
       </div>
     </div>
-  
+<!--   
     <div class="row mb-2">
       <div class="col-md-6">
         <div class="card flex-md-row mb-4 shadow-sm h-md-250" *ngIf="featuredOne$ | async as one">
@@ -22,7 +22,7 @@
             <span class="text-black font-weight-bold anchor" (click)="continueRead(postKey.featuredOne)">Continue reading...</span>
           </div>
           <div [style.backgroundImage]="'url(' + one.imageUrl + ')'" class="thumbnail card-img-right" style="flex: 1"></div>
-          <!-- <img class="card-img-right flex-auto d-none d-lg-block " [src] = "one.imageUrl" alt="Card image cap"> -->
+      <img class="card-img-right flex-auto d-none d-lg-block " [src] = "one.imageUrl" alt="Card image cap"> 
         </div>
       </div>
       <div class="col-md-6">
@@ -34,11 +34,11 @@
             </h3>
             <div class="mb-1 text-muted">{{two.date}}</div>
             <div markdown [data]="two.content" class="card-text mb-auto fixedWidth" ngPreserveWhitespaces></div>
-            <span class="text-black font-weight-bold anchor" (click)="continueRead(blog.key)">Continue reading...</span>
+            <span class="text-black font-weight-bold anchor" (click)="continueRead(postKey.featuredTwo)">Continue reading...</span>
 
           </div>
           <div [style.backgroundImage]="'url(' + two.imageUrl + ')'" class="thumbnail card-img-right" style="flex: 1"></div>
         </div>
       </div>
     </div>
-  
+   -->
